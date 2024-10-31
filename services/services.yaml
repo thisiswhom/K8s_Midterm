@@ -1,0 +1,48 @@
+# NodePort Service for Alpine Deployment
+apiVersion: v1
+kind: Service
+metadata:
+  name: alpine-service
+spec:
+  selector:
+    app: alpine-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30080  # Exposed port (adjust if needed)
+  type: NodePort
+
+---
+
+# NodePort Service for Postgres Deployment
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+spec:
+  selector:
+    app: postgres-app
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+      nodePort: 30081  # Exposed port (adjust if needed)
+  type: NodePort
+
+---
+
+# NodePort Service for Hello Deployment
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service
+spec:
+  selector:
+    app: hello-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30082  # Exposed port (adjust if needed)
+  type: NodePort
