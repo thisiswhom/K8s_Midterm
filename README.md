@@ -1,8 +1,4 @@
-# Kubernetes Environment Setup for Development Team
-
-## Project Overview
-
-This project establishes a development environment using Kubernetes on Minikube to support essential services in a flexible, scalable, and resilient infrastructure. Designed for a development team, the environment includes a Linux-based containerized setup (Alpine), a database service (Postgres), and a sample web application (Hello Service). These components demonstrate core Kubernetes capabilities such as high availability, self-healing, and network exposure, meeting enterprise-grade standards in a Kubernetes environment.
+# Kubernetes Mid-Term Submission
 
 ## Architecture and Components
 
